@@ -2,7 +2,11 @@ import React, { Component} from 'react';
 
 
 class Signup extends Component{
-    
+    state ={
+        username: "",
+        email: "",
+        password: ""
+    }
 
   render(){
     return(
