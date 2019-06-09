@@ -3,12 +3,16 @@ import { Link } from 'react-router-dom';
 
 
 class Login extends Component{
+    constructor(props){
+        super(props)
+        this.state ={
+                username: "",
+                password: "",
+                userLoggedIn: false
+            }
+        }
     
-state ={
-    username: "",
-    password: "",
-    userLoggedIn: false
-}
+
 
 handleChange=(e) =>{
     this.setState({
@@ -18,7 +22,10 @@ handleChange=(e) =>{
 
 handleSubmit =(e)=>{
     e.preventDefault();
-    console.log(this.state);
+    const { username, password} = this.state;
+    if (username ==="jida" && password ===123){
+
+    }
 }
   render(){
     return(
