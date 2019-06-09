@@ -7,10 +7,10 @@ class Signup extends Component{
         email: "",
         password: ""
     }
-
+    
 
     handleChange=(e) =>{
-    this.setState({
+        this.setState({
         [e.target.id] : e.target.value
     })
 }
