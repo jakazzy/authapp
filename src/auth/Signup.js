@@ -22,17 +22,17 @@ class Signup extends Component{
                         <input type="text" id="username" placeholder="username"/>
                     </div>
                     <div className="form-input text">
+                        <input type="email" id="email" placeholder="email"/>
+                    </div>
+                    <div className="form-input text">
                         <input type="password" id="password" placeholder="password"/>
                     </div>
                     <div className="submit-btn btn-margin">
                         <button type="submit"><b> login</b></button>
-                    </div>
-                    <div className="recover-password-text">
-                        <a href="SignUp.html">forgotten password?</a>
-                    </div>    
+                    </div>   
                 </form>
                 <div className="create-account-text">
-                    <a href="/signup.html"> Don't have an account? Create a new account</a>
+                    <a href="/signup.html"> Have an existing account? sign in</a>
                 </div>
             </div>
         </section>
