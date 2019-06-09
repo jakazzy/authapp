@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import Login from './auth/Login'
+import Signup from './auth/Signup'
 
 
 class App extends Component{
@@ -7,7 +7,7 @@ class App extends Component{
   render(){
     return(
       <div>
-       <Login/>
+       <Signup/>
       </div>
     )
   }
