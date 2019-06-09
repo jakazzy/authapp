@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 
 class Login extends Component{
@@ -24,12 +24,16 @@ handleSubmit =(e)=>{
     e.preventDefault();
     const { username, password} = this.state;
     if (username ==="jida" && password ===123){
-
+        this.setState({
+            userLoggedIn : true
+        })
     }
 }
   render(){
+    if (this.state.userLoggedIn){
+        return <Redirect to="/dashboard"/>
+    }
     return(
-
     <div className="container">
         <section className="customer-success-container">
             <h2 className="portal-title title-text">Customer Success Portal</h2>
