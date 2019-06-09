@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import Dashboard from './Dashboard'
+import Login from './auth/Login'
 
 
 class App extends Component{
@@ -7,7 +7,7 @@ class App extends Component{
   render(){
     return(
       <div>
-       <Dashboard/>
+       <Login/>
       </div>
     )
   }
