@@ -3,6 +3,7 @@ import Login from './auth/Login';
 import Signup from './auth/Signup';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Logout from './Logout'
+import Dashboard from './Dashboard'
 
 
 class App extends Component{
@@ -14,6 +15,7 @@ class App extends Component{
           <Switch>
             <Route exact path="/" component={ Login }/>
             <Route exact  path="/signup" component={ Signup }/>
+            <Route path="/dashboard"  component={ Dashboard }/>
             <Route path="/logout"  component={ Logout }/>
           </Switch>
         </div>

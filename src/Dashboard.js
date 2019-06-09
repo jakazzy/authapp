@@ -18,8 +18,7 @@ class Dashboard extends Component{
                 <li className="dashboard-item"><a href="dashboard.htm">Dashboard</a></li>
                 <li className="dashboard-item"><a href="account.html">Account</a></li>
                 <li className="dashboard-item"><a href="recurring.html">Recurring Revenue</a></li>
-                <Link to="/logout"> Logout</Link>
-
+                <li className="dashboard-item"> <Link  to="/logout"> Logout</Link></li>
             </ul>
         </div>
 
