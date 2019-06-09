@@ -1,13 +1,169 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+html,
+body {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+
+/* Style for login and signup account */
+
+.container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 40% auto;
+}
+
+.customer-success-container {
+    border-right: 1px solid #ccc;
+    /* max-width: 80%; */
+}
+
+.portal-title {
+    padding-top: 10rem;
+    padding-left: 3rem;
+}
+
+.title-text {
+    color: #34495E;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+}
+
+.login-container {
+    padding-left: -1rem;
+}
+
+.wrapper {
+    padding-top: 4rem;
+    padding-left: 4rem;
+}
+
+.form-input input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 60%;
+    height: 3rem;
+    padding: 0.5rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-family: Montserrat;
+    margin: 0 0 2px 0;
+    outline: none;
+}
+
+.recover-password-text {
+    margin-top: 1rem;
+    margin-left: 8rem;
+    padding-left: 16rem
+}
+
+.submit-btn button[type="submit"] {
+    width: 9rem;
+    height: 2.4rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background: #EE8E39;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+.btn-margin {
+    margin-top: 3rem;
+}
+
+.create-account-text {
+    position: relative;
+    bottom: -11rem;
+    color: #5682C3;
+}
+
+
+/* Style for dashboard */
+
+.dashboard-container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 20% auto;
+}
+
+.sidebar {
+    background: #1D4A78;
+}
+
+.avatar {
+    width: 5rem;
+    height: 5rem;
+    padding-left: 6rem;
+    padding-top: 2rem;
+}
+
+.dashboard-content {
+    margin-top: 59px;
+}
+
+.dashboard-item {
+    list-style-type: none;
+    padding-bottom: 1.5rem;
+}
+
+.dashboard-item a {
+    text-decoration: none;
+    color: #EE8E39;
+}
+
+.dashboard-area-text {
+    text-align: center;
+}
+
+.cards {
+    padding: 4rem;
+}
+
+.card-item {
+    height: 15rem;
+    width: 30%;
+    padding-right: 2%;
+    margin-bottom: 2%;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .11), 0 5px 15px 0 rgba(0, 0, 0, .08);
+    text-align: center;
+    box-sizing: content-box;
+    list-style-type: none;
+    display: inline-block;
+}
+
+.text {
+    text-decoration: none;
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+}
+
+.card-item a {
+    display: inline-block;
+    padding-top: 7rem;
+    color: #0D3257;
 }
