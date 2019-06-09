@@ -24,6 +24,7 @@ handleSubmit =(e)=>{
     e.preventDefault();
     const { username, password} = this.state;
     if (username ==="jida" && password === "123"){
+        localStorage.setItem("token", "aujhet376524f");
         this.setState({
             userLoggedIn : true
         })
