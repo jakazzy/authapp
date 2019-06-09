@@ -23,7 +23,7 @@ handleChange=(e) =>{
 handleSubmit =(e)=>{
     e.preventDefault();
     const { username, password} = this.state;
-    if (username ==="jida" && password ===123){
+    if (username ==="jida" && password === "123"){
         this.setState({
             userLoggedIn : true
         })
