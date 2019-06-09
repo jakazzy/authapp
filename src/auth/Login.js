@@ -1,4 +1,5 @@
 import React, { Component} from 'react';
+import { Link } from 'react-router-dom';
 
 
 class Login extends Component{
@@ -19,7 +20,7 @@ state ={
                     Login to access dashboard
                 </h2>
                     
-                <form onSubmit={handleSubmit} className="section-form">
+                <form className="section-form">
                     <div className="form-input text">
                         <input type="text" id="username" placeholder="username"/>
                     </div>
@@ -34,7 +35,7 @@ state ={
                     </div>    
                 </form>
                 <div className="create-account-text">
-                    <a href="/signup.html"> Don't have an account? Create a new account</a>
+                    <Link to="/signup.html">Don't have an account? Create a new account</Link>
                 </div>
             </div>
         </section>
