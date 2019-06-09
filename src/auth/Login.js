@@ -5,6 +5,13 @@ import { Link, Redirect } from 'react-router-dom';
 class Login extends Component{
     constructor(props){
         super(props)
+        const token =localStorage.getItem("token");
+        
+        let userLoggedIn = true;
+        if(token === null){
+            userLoggedIn =false
+        }
+
         this.state ={
                 username: "",
                 password: "",
@@ -12,24 +19,23 @@ class Login extends Component{
             }
         }
     
-
-
-handleChange=(e) =>{
-    this.setState({
-        [e.target.id] : e.target.value
-    })
-}
-
-handleSubmit =(e)=>{
-    e.preventDefault();
-    const { username, password} = this.state;
-    if (username ==="jida" && password === "123"){
-        localStorage.setItem("token", "aujhet376524f");
+    handleChange=(e) =>{
         this.setState({
-            userLoggedIn : true
+            [e.target.id] : e.target.value
         })
     }
-}
+
+    handleSubmit =(e)=>{
+        e.preventDefault();
+        const { username, password} = this.state;
+        
+        if (username ==="jida" && password === "123"){
+            localStorage.setItem("token", "aujhet376524f");
+            this.setState({
+                userLoggedIn : true
+            })
+        }
+    }
   render(){
     if (this.state.userLoggedIn){
         return <Redirect to="/dashboard"/>
