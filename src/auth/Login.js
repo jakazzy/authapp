@@ -3,7 +3,7 @@ import React, { Component} from 'react';
 
 class Login extends Component{
 state ={
-    
+
 }
   render(){
     return(
@@ -19,7 +19,7 @@ state ={
                     Login to access dashboard
                 </h2>
                     
-                <form className="section-form">
+                <form onSubmit={handleSubmit} className="section-form">
                     <div className="form-input text">
                         <input type="text" id="username" placeholder="username"/>
                     </div>
