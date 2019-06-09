@@ -1,11 +1,27 @@
 import React, { Component} from 'react';
 import avatar from './images/avatar.svg';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 
 class Dashboard extends Component{
+    constructor(props){
+        super(props)
+        const token =localStorage.getItem("token");
+        
+        let userLoggedIn = true;
+        if(token === null){
+            userLoggedIn =false
+        }
+
+        this.state ={
+            userLoggedIn
+        }
+    }
 
   render(){
+      if(this.state.userLoggedIn ===false){
+          return <Redirect to="/"/>
+      }
     return(
         
     <div className="dashboard-container">
