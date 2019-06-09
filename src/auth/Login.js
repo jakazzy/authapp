@@ -35,7 +35,7 @@ state ={
                     </div>    
                 </form>
                 <div className="create-account-text">
-                    <Link to="/signup.html">Don't have an account? Create a new account</Link>
+                    <Link to="/signup">Don't have an account? Create a new account</Link>
                 </div>
             </div>
         </section>

@@ -1,6 +1,7 @@
 import React, { Component} from 'react';
 import Login from './auth/Login';
-import { BrowserRouter } from 'react-router-dom';
+import Signup from './auth/Signup';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 
 class App extends Component{
@@ -9,7 +10,10 @@ class App extends Component{
     return(
       <BrowserRouter>
         <div>
-          <Login/>
+          <Switch>
+            <Route exact path="/" component={ Login }/>
+            <Route exact  path="/signup" component={ Signup }/>
+          </Switch>
         </div>
       </BrowserRouter>
       
