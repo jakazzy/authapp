@@ -2,7 +2,23 @@ import React, { Component} from 'react';
 
 
 class Signup extends Component{
+    state ={
+        username: "",
+        email: "",
+        password: ""
+    }
+    
 
+    handleChange=(e) =>{
+        this.setState({
+        [e.target.id] : e.target.value
+    })
+}
+
+    handleSubmit =(e)=>{
+    e.preventDefault();
+    console.log(this.state);
+}
   render(){
     return(
 
@@ -17,18 +33,18 @@ class Signup extends Component{
                     Create an account
                 </h2>
                     
-                <form className="section-form">
+                <form onSubmit={this.handleSubmit} className="section-form">
                     <div className="form-input text">
-                        <input type="text" id="username" placeholder="username"/>
+                        <input type="text" id="username" placeholder="username" onChange={this.handleChange} />
                     </div>
                     <div className="form-input text">
-                        <input type="email" id="email" placeholder="email"/>
+                        <input type="email" id="email" placeholder="email" onChange={this.handleChange}/>
                     </div>
                     <div className="form-input text">
-                        <input type="password" id="password" placeholder="password"/>
+                        <input type="password" id="password" placeholder="password" onChange={this.handleChange}/>
                     </div>
                     <div className="submit-btn btn-margin">
-                        <button type="submit"><b> login</b></button>
+                        <button type="submit">login</button>
                     </div>   
                 </form>
                 <div className="create-account-text">

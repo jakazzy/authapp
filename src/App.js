@@ -1,14 +1,22 @@
 import React, { Component} from 'react';
-import Dashboard from './Dashboard'
+import Login from './auth/Login';
+import Signup from './auth/Signup';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 
 class App extends Component{
-
+  
   render(){
     return(
-      <div>
-       <Dashboard/>
-      </div>
+      <BrowserRouter>
+        <div>
+          <Switch>
+            <Route exact path="/" component={ Login }/>
+            <Route exact  path="/signup" component={ Signup }/>
+          </Switch>
+        </div>
+      </BrowserRouter>
+      
     )
   }
 

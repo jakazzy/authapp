@@ -1,8 +1,23 @@
 import React, { Component} from 'react';
+import { Link } from 'react-router-dom';
 
 
 class Login extends Component{
+state ={
+    username: "",
+    password: ""
+}
 
+handleChange=(e) =>{
+    this.setState({
+        [e.target.id] : e.target.value
+    })
+}
+
+handleSubmit =(e)=>{
+    e.preventDefault();
+    console.log(this.state);
+}
   render(){
     return(
 
@@ -17,22 +32,22 @@ class Login extends Component{
                     Login to access dashboard
                 </h2>
                     
-                <form className="section-form">
+                <form onSubmit={this.handleSubmit} className="section-form">
                     <div className="form-input text">
-                        <input type="text" id="username" placeholder="username"/>
+                        <input type="text" id="username" placeholder="username" onChange={this.handleChange}/>
                     </div>
                     <div className="form-input text">
-                        <input type="password" id="password" placeholder="password"/>
+                        <input type="password" id="password" placeholder="password" onChange={this.handleChange}/>
                     </div>
                     <div className="submit-btn btn-margin">
-                        <button type="submit"><b> login</b></button>
+                        <button type="submit"> login</button>
                     </div>
                     <div className="recover-password-text">
                         <a href="SignUp.html">forgotten password?</a>
                     </div>    
                 </form>
                 <div className="create-account-text">
-                    <a href="/signup.html"> Don't have an account? Create a new account</a>
+                    <Link to="/signup">Don't have an account? Create a new account</Link>
                 </div>
             </div>
         </section>
