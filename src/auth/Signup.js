@@ -2,6 +2,7 @@ import React, { Component} from 'react';
 
 
 class Signup extends Component{
+    
 
   render(){
     return(
@@ -28,7 +29,7 @@ class Signup extends Component{
                         <input type="password" id="password" placeholder="password"/>
                     </div>
                     <div className="submit-btn btn-margin">
-                        <button type="submit"><b> login</b></button>
+                        <button type="submit">login</button>
                     </div>   
                 </form>
                 <div className="create-account-text">
