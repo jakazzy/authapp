@@ -6,13 +6,7 @@ import LoginApp from './LoginForm'
 class Login extends Component{
     constructor(props){
         super(props)
-        const token =localStorage.getItem("token");
         
-        let userLoggedIn = true;
-        if(token === null){
-            userLoggedIn =false
-        }
-
         this.state ={
                 username: "",
                 password: "",
@@ -20,24 +14,6 @@ class Login extends Component{
             }
         }
     
-    handleChange=(e) =>{
-        this.setState({
-            [e.target.name] : e.target.value
-        })
-    }
-
-    handleSubmit =(e)=>{
-        e.preventDefault();
-        const { username, password} = this.state;
-        const name = localStorage.getItem("username");
-        const pwd = localStorage.getItem("password");
-        if (username === name && password === pwd){
-            localStorage.setItem("token", "aujhet376524f");
-            this.setState({
-                userLoggedIn : true
-            })
-        }
-    }
   render(){
     if (this.state.userLoggedIn){
         return <Redirect to="/dashboard"/>

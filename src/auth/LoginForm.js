@@ -18,6 +18,10 @@ class LoginForm extends Component {
 
     render() {
         const  { errors,touched} = this.props;
+        const token =localStorage.getItem("token");
+        if (token !== null){
+        return <Redirect to="/dashboard"/>
+    }
         return (
             <div>
                 <Form className="section-form">
@@ -54,6 +58,12 @@ const LoginApp = withFormik({
     }),
 
     handleSubmit(values, { resetForm, setSubmitting}){
+        const { username, password} = this.state;
+        const name = localStorage.getItem("username");
+        const pwd = localStorage.getItem("password");
+        if (username === name && password === pwd){
+            localStorage.setItem("token", "aujhet376524f"); 
+        }
         console.log(values)
     }
 

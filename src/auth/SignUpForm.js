@@ -15,17 +15,17 @@ class SignUpForm extends Component {
     }
  
     render() {
+        const   { errors,touched} = this.props;
         const token =localStorage.getItem("token");
         if (token !== null){
         return <Redirect to="/dashboard"/>
     }
-        const   { errors,touched} = this.props;
         return (
             <div>
                 <Form className="section-form">
                     <div className="form-input text">
                         <Field type="text" name="username" placeholder="username" />
-                        { touched.username && errors.username && <p>{errors.username }</p>}
+                        { touched.username && errors.username && <p>{errors.username}</p>}
                     </div>
                     <div className="form-input text">
                         <Field type="email" name="email" placeholder="email" />
