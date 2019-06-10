@@ -1,30 +1,24 @@
 import React, { Component } from 'react'
+import {  Redirect } from 'react-router-dom';
 import { withFormik, Form, Field} from 'formik'
 import * as Yup from 'yup'
 
-class SignUpForm extends Component {
+class SignUpForm extends Component { 
     constructor(props){
         super(props)
-        
+    
         this.state ={
             username: "",
             email: "",
             password: ""
         }
     }
-   
-    
-//     handleChange=(e) =>{
-//         this.setState({
-//         [e.target.name] : e.target.value
-//     })
-// }
-
-//     handleSubmit =(e)=>{
-//     e.preventDefault();
-//     console.log(this.state);
-// }
+ 
     render() {
+        const token =localStorage.getItem("token");
+        if (token !== null){
+        return <Redirect to="/dashboard"/>
+    }
         const   { errors,touched} = this.props;
         return (
             <div>
@@ -71,6 +65,8 @@ const FormikApp = withFormik({
             localStorage.setItem("username", values.username);
             localStorage.setItem("email", values.email);
             localStorage.setItem("password", values.password);
+            localStorage.setItem("token", "aujhet376524f");
+            
         },2000)
         console.log(values)
     }
