@@ -1,6 +1,6 @@
 import React, { Component} from 'react';
-import Login from './auth/Login';
-import Signup from './auth/Signup';
+import Login from './components/Login';
+import Signup from './components/Signup';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Logout from './Logout'
 import Dashboard from './Dashboard'
