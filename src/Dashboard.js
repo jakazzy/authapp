@@ -1,10 +1,27 @@
 import React, { Component} from 'react';
-import avatar from './images/avatar.svg'
+import avatar from './images/avatar.svg';
+import { Link, Redirect } from 'react-router-dom';
 
 
 class Dashboard extends Component{
+    constructor(props){
+        super(props)
+        const token =localStorage.getItem("token");
+        
+        let userLoggedIn = true;
+        if(token === null){
+            userLoggedIn =false
+        }
+
+        this.state ={
+            userLoggedIn
+        }
+    }
 
   render(){
+      if(this.state.userLoggedIn ===false){
+          return <Redirect to="/"/>
+      }
     return(
         
     <div className="dashboard-container">
@@ -17,6 +34,7 @@ class Dashboard extends Component{
                 <li className="dashboard-item"><a href="dashboard.htm">Dashboard</a></li>
                 <li className="dashboard-item"><a href="account.html">Account</a></li>
                 <li className="dashboard-item"><a href="recurring.html">Recurring Revenue</a></li>
+                <li className="dashboard-item"> <Link  to="/logout"> Logout</Link></li>
             </ul>
         </div>
 
