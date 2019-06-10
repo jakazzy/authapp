@@ -39,6 +39,7 @@ class SignUpForm extends Component {
                     </div>
                     <div className="form-input text">
                         <Field type="password" name="password" placeholder="password" />
+                        { errors.password && <p>{errors.password}</p>}
                     </div>
                     <div className="submit-btn btn-margin">
                         <button type="submit">login</button>
