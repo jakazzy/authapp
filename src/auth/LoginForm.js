@@ -17,11 +17,13 @@ class LoginForm extends Component {
 
 
     render() {
+        const  { errors,touched} = this.props;
         return (
             <div>
                 <Form className="section-form">
                     <div className="form-input text">
                         <Field type="text" name="username" placeholder="username" />
+                        { touched.username && errors.username && <p>{errors.username}</p>}
                     </div>
                     <div className="form-input text">
                         <Field type="password" name="password" placeholder="password" />
@@ -45,6 +47,10 @@ const LoginApp = withFormik({
             password:""
         }
     },
+    validationSchema: Yup.object().shape({
+        username: Yup.string().required("username required"),
+        password: Yup.string().min(8, "8 characters or more required").required("password required")
+    }),
 
     handleSubmit(values, { resetForm, setSubmitting}){
         console.log(values)
