@@ -57,16 +57,19 @@ const LoginApp = withFormik({
         password: Yup.string().min(8, "8 characters or more required").required("password required")
     }),
 
-    handleSubmit(values, { resetForm, setSubmitting}){
-        const { username, password} = this.state;
-        const name = localStorage.getItem("username");
-        const pwd = localStorage.getItem("password");
+    handleSubmit(values, { resetForm, setErrors, setSubmitting}){
+        setTimeout(() =>{
+            const { username, password} = this.state
+            const name = localStorage.getItem("username");
+            const pwd = localStorage.getItem("password");
         if (username === name && password === pwd){
             localStorage.setItem("token", "aujhet376524f");
             resetForm() 
         }else{
             setErrors({username: "username does not exist. Signup"})
         }
+        setSubmitting(false)
+        },2000)
         console.log(values)
     }
 
