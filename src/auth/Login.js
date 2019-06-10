@@ -21,7 +21,7 @@ class Login extends Component{
     
     handleChange=(e) =>{
         this.setState({
-            [e.target.id] : e.target.value
+            [e.target.name] : e.target.value
         })
     }
 
@@ -54,10 +54,10 @@ class Login extends Component{
                     
                 <form onSubmit={this.handleSubmit} className="section-form">
                     <div className="form-input text">
-                        <input type="text" id="username" placeholder="username" onChange={this.handleChange}/>
+                        <input type="text" name="username" placeholder="username" onChange={this.handleChange}/>
                     </div>
                     <div className="form-input text">
-                        <input type="password" id="password" placeholder="password" onChange={this.handleChange}/>
+                        <input type="password" name="password" placeholder="password" onChange={this.handleChange}/>
                     </div>
                     <div className="submit-btn btn-margin">
                         <button type="submit"> login</button>
