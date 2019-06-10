@@ -20,10 +20,10 @@ class SignUpForm extends Component {
 //     })
 // }
 
-    handleSubmit =(e)=>{
-    e.preventDefault();
-    console.log(this.state);
-}
+//     handleSubmit =(e)=>{
+//     e.preventDefault();
+//     console.log(this.state);
+// }
     render() {
         const   { values, handleChange, handleSubmit} = this.props;
         return (
@@ -54,6 +54,10 @@ const FormikApp = withFormik({
             email: "name@kudobuzz.com",
             password:""
         }
+    }
+
+    handleSubmit(values){
+        console.log(values)
     }
 })(SignUpForm)
 
