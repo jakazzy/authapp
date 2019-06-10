@@ -60,9 +60,11 @@ const FormikApp = withFormik({
     },
 
     validationSchema: Yup.object().shape({
-        username: Yup.string().required(),
-        email: Yup.string().email().matches(/^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@kudobuzz.com$/g).required(),
-        password: Yup.string().min(8).required()
+        username: Yup.string().required("username required"),
+        email: Yup.string().email("email not valid")
+        .matches(/^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@kudobuzz.com$/g,"email format should Kat@kudobuzz.com")
+        .required("email required"),
+        password: Yup.string().min(8, "8 characters or more required").required("password required")
     }),
     handleSubmit(values){
         console.log(values)
