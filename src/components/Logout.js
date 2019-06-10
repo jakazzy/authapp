@@ -10,7 +10,7 @@ render(){
     return(
         <div>
             <h2 className="title-text">You are currently Logged out</h2>
-            <Link to="/">Login to access dashboard</Link>
+            <Link to="/signin">Login to access dashboard</Link>
         </div>
         )
         }

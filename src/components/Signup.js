@@ -1,5 +1,6 @@
 import React, { Component} from 'react'
 import FormikApp from './SignUpForm'
+import { Link } from 'react-router-dom';
 
 
 
@@ -20,7 +21,7 @@ class Signup extends Component{
                 </h2>
                 <FormikApp/>
                 <div className="create-account-text">
-                    <a href="/signup.html"> Have an existing account? sign in</a>
+                    <Link to="/signin"> Have an existing account? sign in</Link>
                 </div>
             </div>
         </section>
