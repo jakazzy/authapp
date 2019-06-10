@@ -25,7 +25,7 @@ class SignUpForm extends Component {
 //     console.log(this.state);
 // }
     render() {
-        const   { values, errors,touched} = this.props;
+        const   { errors,touched} = this.props;
         return (
             <div>
                 <Form className="section-form">
@@ -66,7 +66,12 @@ const FormikApp = withFormik({
         .required("email required"),
         password: Yup.string().min(8, "8 characters or more required").required("password required")
     }),
-    handleSubmit(values){
+    handleSubmit(values, { resetForm, setSubmitting}){
+        setTimeout(()=>{
+            localStorage.setItem("username", values.username);
+            localStorage.setItem("email", values.email);
+            localStorage.setItem("password", values.password);
+        },2000)
         console.log(values)
     }
 })(SignUpForm)
