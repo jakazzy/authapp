@@ -66,7 +66,7 @@ const LoginApp = withFormik({
             localStorage.setItem("token", "aujhet376524f");
             resetForm() 
         }else{
-            setErrors({username: "username does not exist. Create an account"})
+            setErrors({username: "username does not exist. Click on link below to create an account"})
         }
         setSubmitting(false)
         },2000)
