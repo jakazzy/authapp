@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
-import {  Redirect } from 'react-router-dom';
+import React, { Component} from 'react'
+import { Redirect } from 'react-router-dom'
 import { withFormik, Form, Field} from 'formik'
 import * as Yup from 'yup'
 
-class SignUpForm extends Component { 
+
+class LoginForm extends Component {
     constructor(props){
         super(props)
     
@@ -13,9 +14,10 @@ class SignUpForm extends Component {
             password: ""
         }
     }
- 
+
+
     render() {
-        const   { errors,touched} = this.props;
+        const  { errors,touched} = this.props;
         const token =localStorage.getItem("token");
         if (token !== null){
         return <Redirect to="/dashboard"/>
@@ -28,48 +30,43 @@ class SignUpForm extends Component {
                         { touched.username && errors.username && <p>{errors.username}</p>}
                     </div>
                     <div className="form-input text">
-                        <Field type="email" name="email" placeholder="email" />
-                        { touched.email && errors.email && <p>{errors.email}</p>}
-                    </div>
-                    <div className="form-input text">
                         <Field type="password" name="password" placeholder="password" />
                         { touched.password && errors.password && <p>{errors.password}</p>}
                     </div>
                     <div className="submit-btn btn-margin">
-                        <button type="submit">login</button>
-                    </div>   
+                        <button type="submit"> login</button>
+                    </div>
+                    <div className="recover-password-text">
+                        <a href="SignUp.html">forgotten password?</a>
+                    </div>    
                 </Form>
             </div>
         )
     }
 }
 
-const FormikApp = withFormik({
+const LoginApp = withFormik({
     mapPropsToValues(){
         return{
-            username:"username",
-            email: "name@kudobuzz.com",
+            username:"",
             password:""
         }
     },
-
     validationSchema: Yup.object().shape({
         username: Yup.string().required("username required"),
-        email: Yup.string().email("email not valid")
-        .matches(/^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@kudobuzz.com$/g,"email format should be Kat@kudobuzz.com")
-        .required("email required"),
         password: Yup.string().min(8, "8 characters or more required").required("password required")
     }),
+
     handleSubmit(values, { resetForm, setSubmitting}){
-        setTimeout(()=>{
-            localStorage.setItem("username", values.username);
-            localStorage.setItem("email", values.email);
-            localStorage.setItem("password", values.password);
-            localStorage.setItem("token", "aujhet376524f");
-            
-        },2000)
+        const { username, password} = this.state;
+        const name = localStorage.getItem("username");
+        const pwd = localStorage.getItem("password");
+        if (username === name && password === pwd){
+            localStorage.setItem("token", "aujhet376524f"); 
+        }
         console.log(values)
     }
-})(SignUpForm)
 
-export default FormikApp
+})(LoginForm)
+
+export default LoginApp
