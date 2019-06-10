@@ -59,14 +59,14 @@ const LoginApp = withFormik({
 
     handleSubmit(values, { resetForm, setErrors, setSubmitting}){
         setTimeout(() =>{
-            const { username, password} = this.state
+            const { username, password} = values;
             const name = localStorage.getItem("username");
             const pwd = localStorage.getItem("password");
         if (username === name && password === pwd){
             localStorage.setItem("token", "aujhet376524f");
             resetForm() 
         }else{
-            setErrors({username: "username does not exist. Signup"})
+            setErrors({username: "username does not exist. Create an account"})
         }
         setSubmitting(false)
         },2000)
