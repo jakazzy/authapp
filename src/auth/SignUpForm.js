@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { withFormik, Form, Field} from 'formik'
-import { Yup } from 'yup'
+import * as Yup from 'yup'
 
 class SignUpForm extends Component {
     constructor(props){
@@ -25,18 +25,18 @@ class SignUpForm extends Component {
 //     console.log(this.state);
 // }
     render() {
-        const   { values, handleChange} = this.props;
+        const   { values} = this.props;
         return (
             <div>
                 <Form className="section-form">
                     <div className="form-input text">
-                        <input type="text" name="username" placeholder="username" onChange={handleChange} value={values.username} />
+                        <Field type="text" name="username" placeholder="username" />
                     </div>
                     <div className="form-input text">
-                        <input type="email" name="email" placeholder="email" onChange={handleChange} value={values.email} />
+                        <Field type="email" name="email" placeholder="email" />
                     </div>
                     <div className="form-input text">
-                        <input type="password" name="password" placeholder="password" onChange={handleChange}/>
+                        <Field type="password" name="password" placeholder="password" />
                     </div>
                     <div className="submit-btn btn-margin">
                         <button type="submit">login</button>
@@ -56,6 +56,9 @@ const FormikApp = withFormik({
         }
     },
 
+    validationSchema: Yup.object().shape({
+        email: Yup.string().email().required()
+    }),
     handleSubmit(values){
         console.log(values)
     }
