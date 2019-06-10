@@ -9,7 +9,7 @@ class Logout extends Component{
 render(){
     return(
         <div>
-            <h2>You are currently Logged out</h2>
+            <h2 className="title-text">You are currently Logged out</h2>
             <Link to="/">Login to access dashboard</Link>
         </div>
         )

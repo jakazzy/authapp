@@ -2,8 +2,8 @@ import React, { Component} from 'react';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Logout from './Logout'
-import Dashboard from './Dashboard'
+import Logout from './components/Logout'
+import Dashboard from './components/Dashboard'
 
 
 class App extends Component{
