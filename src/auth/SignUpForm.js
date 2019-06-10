@@ -25,21 +25,21 @@ class SignUpForm extends Component {
 //     console.log(this.state);
 // }
     render() {
-        const   { values, errors} = this.props;
+        const   { values, errors,touched} = this.props;
         return (
             <div>
                 <Form className="section-form">
                     <div className="form-input text">
                         <Field type="text" name="username" placeholder="username" />
-                        { errors.username && <p>{errors.username}</p>}
+                        { touched.username && errors.username && <p>{errors.username}</p>}
                     </div>
                     <div className="form-input text">
                         <Field type="email" name="email" placeholder="email" />
-                        { errors.email && <p>{errors.email}</p>}
+                        { touched.email && errors.email && <p>{errors.email}</p>}
                     </div>
                     <div className="form-input text">
                         <Field type="password" name="password" placeholder="password" />
-                        { errors.password && <p>{errors.password}</p>}
+                        { touched.password && errors.password && <p>{errors.password}</p>}
                     </div>
                     <div className="submit-btn btn-margin">
                         <button type="submit">login</button>
