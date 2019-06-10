@@ -3,13 +3,18 @@ import { withFormik, Form, Field} from 'formik'
 import { Yup } from 'yup'
 
 class SignUpForm extends Component {
-
-    state ={
-        username: "",
-        email: "",
-        password: ""
+    constructor(props){
+        super(props)
+        
+        this.state ={
+            username: "",
+            email: "",
+            password: ""
+        }
     }
+   
     
+  
 
     handleChange=(e) =>{
         this.setState({
@@ -22,11 +27,12 @@ class SignUpForm extends Component {
     console.log(this.state);
 }
     render() {
+        const   { values } = this.props;
         return (
             <div>
                 <form onSubmit={this.handleSubmit} className="section-form">
                     <div className="form-input text">
-                        <input type="text" name="username" placeholder="username" onChange={this.handleChange} />
+                        <input type="text" name="username" placeholder="username" onChange={this.handleChange} value={values.username} />
                     </div>
                     <div className="form-input text">
                         <input type="email" name="email" placeholder="email" onChange={this.handleChange}/>
@@ -43,4 +49,14 @@ class SignUpForm extends Component {
     }
 }
 
-export default SignUpForm
+const FormikApp = withFormik({
+    mapPropsToValues(){
+        return{
+            username:"name",
+            email: "",
+            password:""
+        }
+    }
+})(SignUpForm)
+
+export default FormikApp
