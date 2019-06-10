@@ -54,7 +54,7 @@ const FormikApp = withFormik({
             email: "name@kudobuzz.com",
             password:""
         }
-    }
+    },
 
     handleSubmit(values){
         console.log(values)
