@@ -20,7 +20,7 @@ class Dashboard extends Component{
 
   render(){
       if(this.state.userLoggedIn ===false){
-          return <Redirect to="/"/>
+          return <Redirect to="/signin"/>
       }
     return(
         
