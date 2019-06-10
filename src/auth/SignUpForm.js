@@ -25,10 +25,10 @@ class SignUpForm extends Component {
 //     console.log(this.state);
 // }
     render() {
-        const   { values, handleChange, handleSubmit} = this.props;
+        const   { values, handleChange} = this.props;
         return (
             <div>
-                <form onSubmit={handleSubmit} className="section-form">
+                <Form className="section-form">
                     <div className="form-input text">
                         <input type="text" name="username" placeholder="username" onChange={handleChange} value={values.username} />
                     </div>
@@ -41,7 +41,7 @@ class SignUpForm extends Component {
                     <div className="submit-btn btn-margin">
                         <button type="submit">login</button>
                     </div>   
-                </form>
+                </Form>
             </div>
         )
     }
