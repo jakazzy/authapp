@@ -14,31 +14,29 @@ class SignUpForm extends Component {
     }
    
     
-  
-
-    handleChange=(e) =>{
-        this.setState({
-        [e.target.name] : e.target.value
-    })
-}
+//     handleChange=(e) =>{
+//         this.setState({
+//         [e.target.name] : e.target.value
+//     })
+// }
 
     handleSubmit =(e)=>{
     e.preventDefault();
     console.log(this.state);
 }
     render() {
-        const   { values } = this.props;
+        const   { values, handleChange, handleSubmit} = this.props;
         return (
             <div>
-                <form onSubmit={this.handleSubmit} className="section-form">
+                <form onSubmit={handleSubmit} className="section-form">
                     <div className="form-input text">
-                        <input type="text" name="username" placeholder="username" onChange={this.handleChange} value={values.username} />
+                        <input type="text" name="username" placeholder="username" onChange={handleChange} value={values.username} />
                     </div>
                     <div className="form-input text">
-                        <input type="email" name="email" placeholder="email" onChange={this.handleChange}/>
+                        <input type="email" name="email" placeholder="email" onChange={handleChange} value={values.email} />
                     </div>
                     <div className="form-input text">
-                        <input type="password" name="password" placeholder="password" onChange={this.handleChange}/>
+                        <input type="password" name="password" placeholder="password" onChange={handleChange}/>
                     </div>
                     <div className="submit-btn btn-margin">
                         <button type="submit">login</button>
@@ -52,8 +50,8 @@ class SignUpForm extends Component {
 const FormikApp = withFormik({
     mapPropsToValues(){
         return{
-            username:"name",
-            email: "",
+            username:"username",
+            email: "name@kudobuzz.com",
             password:""
         }
     }
