@@ -17,7 +17,7 @@ class LoginForm extends Component {
 
 
     render() {
-        const  { errors,touched, isSubmitting } = this.props;
+        const  { errors, touched, isSubmitting } = this.props;
         const token =localStorage.getItem("token");
         if (token !== null){
         return <Redirect to="/dashboard"/>

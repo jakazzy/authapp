@@ -15,7 +15,7 @@ class SignUpForm extends Component {
     }
  
     render() {
-        const   { errors,touched} = this.props;
+        const   { errors, touched, isSubmitting} = this.props;
         const token =localStorage.getItem("token");
         if (token !== null){
         return <Redirect to="/dashboard"/>
@@ -36,7 +36,7 @@ class SignUpForm extends Component {
                         { touched.password && errors.password && <p>{errors.password}</p>}
                     </div>
                     <div className="submit-btn btn-margin">
-                        <button type="submit">login</button>
+                        <button disabled={isSubmitting} type="submit">login</button>
                     </div>   
                 </Form>
             </div>
