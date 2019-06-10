@@ -25,15 +25,17 @@ class SignUpForm extends Component {
 //     console.log(this.state);
 // }
     render() {
-        const   { values} = this.props;
+        const   { values, errors} = this.props;
         return (
             <div>
                 <Form className="section-form">
                     <div className="form-input text">
                         <Field type="text" name="username" placeholder="username" />
+                        { errors.username && <p>{errors.username}</p>}
                     </div>
                     <div className="form-input text">
                         <Field type="email" name="email" placeholder="email" />
+                        { errors.email && <p>{errors.email}</p>}
                     </div>
                     <div className="form-input text">
                         <Field type="password" name="password" placeholder="password" />
@@ -58,7 +60,7 @@ const FormikApp = withFormik({
 
     validationSchema: Yup.object().shape({
         username: Yup.string().required(),
-        email: Yup.string().email().required(),
+        email: Yup.string().email().matches(/^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@kudobuzz.com$/g).required(),
         password: Yup.string().min(8).required()
     }),
     handleSubmit(values){
