@@ -1,5 +1,6 @@
-import React, { Component} from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import React, { Component} from 'react'
+import { Link, Redirect } from 'react-router-dom'
+import LoginApp from './LoginForm'
 
 
 class Login extends Component{
@@ -53,20 +54,7 @@ class Login extends Component{
                     Login to access dashboard
                 </h2>
                     
-                <form onSubmit={this.handleSubmit} className="section-form">
-                    <div className="form-input text">
-                        <input type="text" name="username" placeholder="username" onChange={this.handleChange}/>
-                    </div>
-                    <div className="form-input text">
-                        <input type="password" name="password" placeholder="password" onChange={this.handleChange}/>
-                    </div>
-                    <div className="submit-btn btn-margin">
-                        <button type="submit"> login</button>
-                    </div>
-                    <div className="recover-password-text">
-                        <a href="SignUp.html">forgotten password?</a>
-                    </div>    
-                </form>
+                <LoginApp/>
                 <div className="create-account-text">
                     <Link to="/signup">Don't have an account? Create a new account</Link>
                 </div>
