@@ -84,9 +84,10 @@ input[type="email"] {
     color: #fff;
     background: #EE8E39;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #EE8E39;
     text-transform: uppercase;
     margin-top: 1rem;
+    box-shadow: 5px 10px 10px #888888;
 }
 
 .btn-margin {
@@ -166,4 +167,34 @@ input[type="email"] {
     display: inline-block;
     padding-top: 7rem;
     color: #0D3257;
+}
+
+
+/* Homepage */
+
+.navbar {
+    border: 1px solid #9e9e9e;
+    text-align: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.link-button {
+    list-style: none;
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    background: #EE8E39;
+    border-radius: 5px;
+    border: 1px solid #EE8E39;
+    text-transform: uppercase;
+    box-shadow: 5px 10px 10px #888888;
+}
+
+#Homepage-text {
+    font-size: 4rem;
+    text-align: center;
 }
