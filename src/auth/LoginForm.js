@@ -19,12 +19,12 @@ class LoginForm extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit} className="section-form">
+                <Form className="section-form">
                     <div className="form-input text">
-                        <input type="text" name="username" placeholder="username" onChange={this.handleChange}/>
+                        <Field type="text" name="username" placeholder="username" />
                     </div>
                     <div className="form-input text">
-                        <input type="password" name="password" placeholder="password" onChange={this.handleChange}/>
+                        <Field type="password" name="password" placeholder="password" />
                     </div>
                     <div className="submit-btn btn-margin">
                         <button type="submit"> login</button>
@@ -32,12 +32,24 @@ class LoginForm extends Component {
                     <div className="recover-password-text">
                         <a href="SignUp.html">forgotten password?</a>
                     </div>    
-                </form>
+                </Form>
             </div>
         )
     }
 }
 
-const LoginApp = withFormik({})(LoginForm)
+const LoginApp = withFormik({
+    mapPropsToValues(){
+        return{
+            username:"",
+            password:""
+        }
+    },
+
+    handleSubmit(values, { resetForm, setSubmitting}){
+        console.log(values)
+    }
+
+})(LoginForm)
 
 export default LoginApp
