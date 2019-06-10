@@ -28,8 +28,9 @@ class Login extends Component{
     handleSubmit =(e)=>{
         e.preventDefault();
         const { username, password} = this.state;
-        
-        if (username ==="jida" && password === "123"){
+        const name = localStorage.getItem("username");
+        const pwd = localStorage.getItem("password");
+        if (username === name && password === pwd){
             localStorage.setItem("token", "aujhet376524f");
             this.setState({
                 userLoggedIn : true
