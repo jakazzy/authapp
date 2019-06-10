@@ -66,7 +66,7 @@ const FormikApp = withFormik({
             localStorage.setItem("email", values.email);
             localStorage.setItem("password", values.password);
             localStorage.setItem("token", "aujhet376524f");
-            
+            resetForm()
         },2000)
         console.log(values)
     }

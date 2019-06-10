@@ -17,7 +17,7 @@ class LoginForm extends Component {
 
 
     render() {
-        const  { errors,touched} = this.props;
+        const  { errors,touched, isSubmitting } = this.props;
         const token =localStorage.getItem("token");
         if (token !== null){
         return <Redirect to="/dashboard"/>
@@ -34,7 +34,7 @@ class LoginForm extends Component {
                         { touched.password && errors.password && <p>{errors.password}</p>}
                     </div>
                     <div className="submit-btn btn-margin">
-                        <button type="submit"> login</button>
+                        <button disabled={isSubmitting} type="submit"> login</button>
                     </div>
                     <div className="recover-password-text">
                         <a href="SignUp.html">forgotten password?</a>
@@ -62,7 +62,10 @@ const LoginApp = withFormik({
         const name = localStorage.getItem("username");
         const pwd = localStorage.getItem("password");
         if (username === name && password === pwd){
-            localStorage.setItem("token", "aujhet376524f"); 
+            localStorage.setItem("token", "aujhet376524f");
+            resetForm() 
+        }else{
+            setErrors({username: "username does not exist. Signup"})
         }
         console.log(values)
     }
