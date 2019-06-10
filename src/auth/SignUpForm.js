@@ -57,7 +57,9 @@ const FormikApp = withFormik({
     },
 
     validationSchema: Yup.object().shape({
-        email: Yup.string().email().required()
+        username: Yup.string().required(),
+        email: Yup.string().email().required(),
+        password: Yup.string().min(8).required()
     }),
     handleSubmit(values){
         console.log(values)
