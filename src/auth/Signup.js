@@ -1,24 +1,10 @@
-import React, { Component} from 'react';
+import React, { Component} from 'react'
+import FormikApp from './SignUpForm'
+
 
 
 class Signup extends Component{
-    state ={
-        username: "",
-        email: "",
-        password: ""
-    }
-    
-
-    handleChange=(e) =>{
-        this.setState({
-        [e.target.id] : e.target.value
-    })
-}
-
-    handleSubmit =(e)=>{
-    e.preventDefault();
-    console.log(this.state);
-}
+   
   render(){
     return(
 
@@ -32,21 +18,7 @@ class Signup extends Component{
                 <h2 className="login-title title-text">
                     Create an account
                 </h2>
-                    
-                <form onSubmit={this.handleSubmit} className="section-form">
-                    <div className="form-input text">
-                        <input type="text" id="username" placeholder="username" onChange={this.handleChange} />
-                    </div>
-                    <div className="form-input text">
-                        <input type="email" id="email" placeholder="email" onChange={this.handleChange}/>
-                    </div>
-                    <div className="form-input text">
-                        <input type="password" id="password" placeholder="password" onChange={this.handleChange}/>
-                    </div>
-                    <div className="submit-btn btn-margin">
-                        <button type="submit">login</button>
-                    </div>   
-                </form>
+                <FormikApp/>
                 <div className="create-account-text">
                     <a href="/signup.html"> Have an existing account? sign in</a>
                 </div>
@@ -55,8 +27,6 @@ class Signup extends Component{
         
         
     </div>
-
-
     )
   }
 

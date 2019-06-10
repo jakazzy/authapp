@@ -21,15 +21,16 @@ class Login extends Component{
     
     handleChange=(e) =>{
         this.setState({
-            [e.target.id] : e.target.value
+            [e.target.name] : e.target.value
         })
     }
 
     handleSubmit =(e)=>{
         e.preventDefault();
         const { username, password} = this.state;
-        
-        if (username ==="jida" && password === "123"){
+        const name = localStorage.getItem("username");
+        const pwd = localStorage.getItem("password");
+        if (username === name && password === pwd){
             localStorage.setItem("token", "aujhet376524f");
             this.setState({
                 userLoggedIn : true
@@ -54,10 +55,10 @@ class Login extends Component{
                     
                 <form onSubmit={this.handleSubmit} className="section-form">
                     <div className="form-input text">
-                        <input type="text" id="username" placeholder="username" onChange={this.handleChange}/>
+                        <input type="text" name="username" placeholder="username" onChange={this.handleChange}/>
                     </div>
                     <div className="form-input text">
-                        <input type="password" id="password" placeholder="password" onChange={this.handleChange}/>
+                        <input type="password" name="password" placeholder="password" onChange={this.handleChange}/>
                     </div>
                     <div className="submit-btn btn-margin">
                         <button type="submit"> login</button>
