@@ -12,7 +12,7 @@
 * [Contact](#contact)
 
 ## General info
-Add more general information about project. What the purpose of the project is? Motivation?
+A simple application auth application built with react.
 
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
