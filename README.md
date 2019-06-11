@@ -1,10 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Authapp
+> This is a simple application to login and sign up into an admin dashboard, created with react.
 
-## Available Scripts
+## Table of contents
+* [General info](#general-info)
+* [Screenshots](#screenshots)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Features](#features)
+* [Status](#status)
+* [Inspiration](#inspiration)
+* [Contact](#contact)
 
+## General info
+A simple application auth application built with react.
+
+## Screenshots
+![Login Screen](./src/images/signin-screen.svg =50x50)
+![Sign up Screen](./src/images/signup-screen.svg =50x50)
+![Dashboard Screen](./src/images/dashboard-screen.svg =50x50 )
+
+## Technologies
+* React - version ^16.8.6
+* React-dom - version ^16.8.6
+* react-router-dom - version ^5.0.1
+* react-scripts - version ^3.0.1
+* formik - version ^1.5.7
+* yup - version ^0.27.0
+
+
+## Setup
+```
+# Clone this repository
+$ git clone https://github.com/jakazzy/authapp
+
+# Go into the repository
+$ cd authapp
+
+# Open project in IDE or Text editor
+```
 In the project directory, you can run:
 
-### `npm start`
+### `npm start` or `yarn start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -25,44 +61,35 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Code Examples
+Show examples of usage:
+`put-your-code-here`
 
-### `npm run eject`
+## Features
+List of features ready and TODOs for future development
+* Sign in
+* Sign up
+* View dashboard
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Status
+Project is: _in progress_
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Inspiration
+Projects done and submitted as JF-1 challenge for Kudobuzz.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `npm run build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
