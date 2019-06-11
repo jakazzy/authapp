@@ -71,6 +71,7 @@ List of features ready and TODOs for future development
 * Sign in
 * Sign up
 * View dashboard
+* View home page and logout
 
 ## Status
 Project is: _in progress_
