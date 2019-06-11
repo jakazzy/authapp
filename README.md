@@ -20,9 +20,13 @@ A simple application auth application built with react.
 ![Dashboard Screen](./src/images/dashboard-screen.svg =50x50 )
 
 ## Technologies
-* Tech 1 - version 1.0
-* Tech 2 - version 2.0
-* Tech 3 - version 3.0
+* React - version ^16.8.6
+* React-dom - version ^16.8.6
+* react-router-dom - version ^5.0.1
+* react-scripts - version ^3.0.1
+* formik - version ^1.5.7
+* yup - version ^0.27.0
+
 
 ## Setup
 Describe how to install / setup your local environement / add link to demo version.
