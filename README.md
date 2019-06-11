@@ -15,9 +15,9 @@
 A simple application auth application built with react.
 
 ## Screenshots
-<img src="/src/images/signin-screen.png" alt="login screen" width="200" height="200"/>
-<img src="/src/images/signup-screen.png" alt="login screen" width="200" height="200"/>
-<img src="/src/images/dashboard-screen.png" alt="login screen" width="200" height="200"/>
+<img src="/src/images/signin-screen.png" alt="login screen" width="400" height="200"/>
+<img src="/src/images/signup-screen.png" alt="login screen" width="400" height="200"/>
+<img src="/src/images/dashboard-screen.png" alt="login screen" width="400" height="200"/>
 
 
 ## Technologies
