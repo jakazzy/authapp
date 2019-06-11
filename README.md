@@ -15,9 +15,10 @@
 A simple application auth application built with react.
 
 ## Screenshots
-![Login Screen](./src/images/signin-screen.svg =50x50)
-![Sign up Screen](./src/images/signup-screen.svg =50x50)
-![Dashboard Screen](./src/images/dashboard-screen.svg =50x50 )
+![Login Screen](./src/images/signin-screen.png =50x50)
+![Sign up Screen](./src/images/signup-screen.png =50x50)
+![Dashboard Screen](./src/images/dashboard-screen.png =50x50)
+<img src="./">
 
 ## Technologies
 * React - version ^16.8.6
