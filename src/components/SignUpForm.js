@@ -36,7 +36,7 @@ class SignUpForm extends Component {
                         { touched.password && errors.password && <p>{errors.password}</p>}
                     </div>
                     <div className="submit-btn btn-margin">
-                        <button disabled={isSubmitting} type="submit">login</button>
+                        <button disabled={isSubmitting} type="submit">signup</button>
                     </div>   
                 </Form>
             </div>
