@@ -15,7 +15,9 @@
 A simple application auth application built with react.
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![Login Screen](./src/images/signin-screen.svg =50x50)
+![Sign up Screen](./src/images/signup-screen.svg =50x50)
+![Dashboard Screen](./src/images/dashboard-screen.svg =50x50 )
 
 ## Technologies
 * Tech 1 - version 1.0
