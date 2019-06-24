@@ -6,6 +6,8 @@ import Home from './../components/Home'
 
 afterEach(cleanup);
 
+global.window = { location: { pathname: null } };
+
 describe('renders without crashing', () => {
     test('renders home page', () => {
         const { asFragment} = render( 
@@ -21,5 +23,17 @@ describe('renders without crashing', () => {
         </BrowserRouter>);
         expect(getByTestId("titleText")).toHaveTextContent('Customer Success Portal');
     })
+})
 
+describe('renders login and sign up pages', () =>{
+    test('test link', () => {
+        const { getByText } = render( 
+        <BrowserRouter>
+            <Route path="/" component={ Home} />   
+        </BrowserRouter>);
+        fireEvent.click(getByText("Log In"));
+        expect(global.window.location.pathname).toEqual('/signin');
+    });
+    
+        
 })
