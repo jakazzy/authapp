@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing renders home page 1`] = `
+<DocumentFragment>
+  <div>
+    <nav
+      class="navbar"
+    >
+      <ul>
+        <li
+          class="link-button"
+        >
+          <a
+            href="/signin"
+          >
+            Log In
+          </a>
+        </li>
+        <li
+          class="link-button right"
+        >
+          <a
+            href="/signup"
+          >
+            SignUp
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <section>
+      <h3
+        class="title-text"
+        data-testid="titleText"
+        id="Homepage-text"
+      >
+        Customer Success Portal
+      </h3>
+    </section>
+  </div>
+</DocumentFragment>
+`;
