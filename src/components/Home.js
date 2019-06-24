@@ -11,7 +11,7 @@ return (
             </ul>
         </nav>
         <section>
-            <h3 id="Homepage-text" className="title-text">Customer Success Portal</h3>
+            <h3  data-testid="titleText" id="Homepage-text" className="title-text">Customer Success Portal</h3>
         </section>
     </div>   
 )

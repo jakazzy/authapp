@@ -30,6 +30,7 @@ exports[`renders without crashing renders home page 1`] = `
     <section>
       <h3
         class="title-text"
+        data-testid="titleText"
         id="Homepage-text"
       >
         Customer Success Portal
