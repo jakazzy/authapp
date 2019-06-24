@@ -35,5 +35,13 @@ describe('renders login and sign up pages', () =>{
         expect(global.window.location.pathname).toEqual('/signin');
     });
     
+    test('test link', () => {
+        const { getByText } = render( 
+        <BrowserRouter>
+            <Route path="/" component={ Home} />   
+        </BrowserRouter>);
+        fireEvent.click(getByText("SignUp"));
+        expect(global.window.location.pathname).toEqual('/signup');
+    })
         
 })
