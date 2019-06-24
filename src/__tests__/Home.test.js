@@ -8,11 +8,18 @@ afterEach(cleanup);
 
 describe('renders without crashing', () => {
     test('renders home page', () => {
-    const { asFragment} = render(
-                                    <BrowserRouter>
-                                    <Route path="/" component={ Home} />
-                                        {/* <Link to="/"><Home/></Link> */}
-                                    </BrowserRouter>);
-    expect(asFragment()).toMatchSnapshot();
+        const { asFragment} = render( 
+        <BrowserRouter>
+            <Route path="/" component={ Home} />   
+        </BrowserRouter>);
+        expect(asFragment()).toMatchSnapshot();
 });
+    test('renders text correctly', () =>{
+        const { getByTestId} = render( 
+        <BrowserRouter>
+            <Route path="/" component={ Home} />   
+        </BrowserRouter>);
+        expect(getByTestId("titleText")).toHaveTextContent('Customer Success Portal');
+    })
+
 })
