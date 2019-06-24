@@ -6,11 +6,13 @@ import Home from './../components/Home'
 
 afterEach(cleanup);
 
-test('renders home page', () => {
+describe('renders without crashing', () => {
+    test('renders home page', () => {
     const { asFragment} = render(
                                     <BrowserRouter>
                                     <Route path="/" component={ Home} />
                                         {/* <Link to="/"><Home/></Link> */}
                                     </BrowserRouter>);
     expect(asFragment()).toMatchSnapshot();
+});
 })
